@@ -1,6 +1,5 @@
 package com.example.redis.streams.config;
 
-import com.example.redis.streams.consumer.ExampleEventConsumer;
 import com.example.redis.streams.data.ExampleMessage;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
