@@ -85,7 +85,7 @@ src/
 
 ## 🧪 Redis CLI Example
 
-To manually inspect Redis Streams via CLI:
+To manually inspect Redis Streams via CURL:
 
 
 ```bash
