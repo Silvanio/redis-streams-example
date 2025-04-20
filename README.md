@@ -88,10 +88,18 @@ src/
 To manually inspect Redis Streams via CLI:
 
 ```bash
+example read message: 
 docker exec -it redis-streams redis-cli
 > XREAD COUNT 10 STREAMS mystream 0
-```
 
+example send message: 
+docker exec -it redis-streams redis-cli
+> XADD example-stream * message "Hello, Redis Stream!"
+
+```
+curl -X POST http://localhost:8080/example \
+-H "Content-Type: application/json" \
+-d '{"message":"Your message here"}'
 ---
 
 ## 🛠 Technologies Used
