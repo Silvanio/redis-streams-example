@@ -92,6 +92,7 @@ To manually inspect Redis Streams via CLI:
 curl -X POST http://localhost:8080/example \
 -H "Content-Type: application/json" \
 -d '{"message":"Your message here"}'
+```
 ---
 
 ## 🛠 Technologies Used
