@@ -20,7 +20,7 @@ public class ExampleController {
 
     @PostMapping("/example")
     public void postExampleMessage(@RequestBody ExampleMessage message) {
-        log.info("Example event consumer reals => on message start: [stream={}, message={}]", "example-stream", message);
+        log.info("Sending message to Redis stream: {}", message);
         ObjectRecord<String, ExampleMessage> event = StreamRecords.newRecord().ofObject(message).withStreamKey("example-stream");
         this.redisTemplate.opsForStream().add(event).subscribe();
 
